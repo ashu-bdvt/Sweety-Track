@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Glucose Reading :</strong>
+  <%= @sugar_reading.glucose_level %><i><strong>mg/dL</i></strong>
+</p>
+
+<p>
+  <strong>Reading Date:</strong>
+  <%= @sugar_reading.reading_date %>
+</p>
+
+<%= link_to 'Edit', edit_sugar_reading_path(@sugar_reading), class: 'btn btn-primary btn-xs' %> |
+<%= link_to 'Back To Readings', sugar_readings_path, class: 'btn btn-success btn-xs' %>

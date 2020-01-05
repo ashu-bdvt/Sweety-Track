@@ -1,0 +1,46 @@
+
+
+
+<div class="row">
+	<h2><%= @report_contents["report_type"]%> Glucose Report</h2>	
+	<% if @report_contents["max_reading"] %>
+	
+
+	<div class="col-xs-2">
+		<strong>Report Date:</strong>
+		<%= @report_contents["report_date"] %>
+	</div>
+
+	<div class="col-xs-2">
+
+			<strong>Max Glucose Level:</strong>
+			<%= @report_contents["max_reading"] %> mg/dl
+
+	</div>
+
+	<div class="col-xs-2">
+		<strong>Min Glucose Level:</strong>
+		<%= @report_contents["min_reading"] %>
+
+	</div>
+
+	<div class="col-xs-2">
+		<strong>Avg Glucose Level:</strong>
+		<%= @report_contents["avg_reading"] %>
+
+	</div>
+	<div class="col-xs-2">
+
+		<% else %>
+
+		<h3>No Records for this date</h3>
+		
+			<%= link_to 'Back To Profile', url_for(current_user), method: :get , class: 'btn btn-primary btn'%>
+		
+		
+	</div>
+
+	<% end%>
+</div>
+
+

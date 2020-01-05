@@ -1,0 +1,2 @@
+module SugarReadingsHelper
+end

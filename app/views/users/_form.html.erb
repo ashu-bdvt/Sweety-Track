@@ -1,0 +1,40 @@
+<%= form_for(@user) do |f| %>
+
+
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= f.label :User_Name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :DOB %><br>
+    <%= f.date_field :date_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :Contact_Number %><br>
+    <%= f.text_field :contact_number %>
+  </div>
+  <div class="field">
+    <%= f.label :Address %><br>
+    <%= f.text_field :address %>
+  </div>
+  
+  <!-- <div class="field">
+	  <%= select_tag(:type, raw('<option value="Patient">Patient</option><option value="Doctor">Doctor</option>')) %>
+  </div> -->
+</br>
+  <div class="actions">
+	<%= f.submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

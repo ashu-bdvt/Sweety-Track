@@ -1,0 +1,26 @@
+<%= form_for(@sugar_reading) do |f| %>
+  <% if @sugar_reading.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sugar_reading.errors.count, "error") %> prohibited this sugar_reading from being saved:</h2>
+
+      <ul>
+      <% @sugar_reading.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= f.label :Sugar_Level %><br>
+    <%= f.text_field :glucose_level %><i><strong>mg/dL</strong></i>
+  </div>
+  <div class="field">
+    <%= f.label :Reading_Date %><br>
+    <%= f.date_field :reading_date %>
+  </div>
+</br>
+  <div class="actions">
+    <%= f.submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

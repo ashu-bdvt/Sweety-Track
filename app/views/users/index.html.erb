@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Users</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>DOB</th>
+      <th>Contact Number</th>
+      <th>Email</th>
+	  <th>Sugar Readings</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |usr| %>
+      <tr>
+        <td><%= usr.name %></td>
+        <td><%= usr.date_of_birth %></td>
+        <td><%= usr.contact_number %></td>
+        <td><%= usr.email %></td>
+		<td><%= link_to 'Your Sugar Readings', sugar_readings_path %></td>
+        <!-- <td><%= link_to 'Show', usr %></td> -->
+        <td><%= link_to 'Edit', edit_user_path(usr) %></td>
+        <td><%= link_to 'Destroy', usr, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<br>
+
+<!-- <%= link_to 'New User', new_user_path %> -->

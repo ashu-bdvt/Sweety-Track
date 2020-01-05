@@ -1,0 +1,12 @@
+<div class="jumbotron">
+  <h1 class="display-4">Sweety </h1><h3>Monitor your glucose levels</h3>
+  <p class="lead">The blood sugar level, blood sugar concentration, or blood glucose level is the concentration of glucose present in the blood of humans and other animals. Glucose is a simple sugar and approximately 4 grams of glucose are present in the blood of a 70-kilogram (150 lb) human at all times.[2] The body tightly regulates blood glucose levels as a part of metabolic homeostasis.[2] Glucose is stored in skeletal muscle and liver cells in the form of glycogen;[2] in fasted individuals, blood glucose is maintained at a constant level at the expense of glycogen stores in the liver and skeletal muscle.[2]</p>
+  <hr class="my-4">
+  <p>With this app you can log your glucose levels regularly and generate useful reports. Your doctor will also have access to your records <i><strong>coming soon</strong></i> </p>
+  <a class="btn btn-primary btn-lg" href="https://en.wikipedia.org/wiki/Blood_sugar_level" role="button">Learn more</a>
+  
+  <% if current_user%>
+  	<%= link_to "Go to My Profile", url_for(current_user), method: :get, class: 'btn btn-success btn-lg'%><br />
+  <% end %>
+</div>
+

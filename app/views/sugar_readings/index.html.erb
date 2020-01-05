@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sugar Readings</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+        <th>Glocose Reading(mg/dL)</th>
+        <th>Reading Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sugar_readings.each do |sugar_reading| %>
+      <tr>
+          <td><%= sugar_reading.glucose_level %></td>
+          <td><%= sugar_reading.reading_date %></td>
+        <!-- <td><%= link_to 'Show', sugar_reading %></td> -->
+        <td><%= link_to 'Edit', edit_sugar_reading_path(sugar_reading), class: 'btn btn-primary btn-xs' %></td>
+        <td><%= link_to 'Destroy', sugar_reading, method: :delete, data: { confirm: 'Are you sure?' },class: 'btn btn-danger btn-xs' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sugar reading', new_sugar_reading_path, class: 'btn btn-primary btn-xs' %> |
+<%= link_to 'My Profile', user_path(current_user), method: :get, class: 'btn btn-success btn-xs' %>
