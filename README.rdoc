@@ -6,13 +6,19 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+2.1.4
 
 * System dependencies
+rails 4.2
 
 * Configuration
+Authentication using Devise
+Authorisation using Pundit
+UI designed using Bootstrap
+Unit tests using RSpec(To Be Implemented)
 
 * Database creation
-
+MongoDB as ORM
 * Database initialization
 
 * How to run the test suite
