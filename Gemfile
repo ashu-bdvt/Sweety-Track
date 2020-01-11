@@ -28,7 +28,7 @@ gem "mongoid", "~> 4.0.0"
 
 
 # Gem needed for User authentication
-gem 'devise', '~> 3.5.2 '
+gem 'devise', '~> 4.7.1'
 
 # Pundit gem for authorization needs
 gem "pundit"
